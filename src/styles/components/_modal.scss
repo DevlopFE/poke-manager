@@ -1,0 +1,131 @@
+.modal {
+  display: block;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.modal-content {
+  height: 50vh;
+  width: 50vw;
+  min-width: 350px;
+  position: fixed;
+  background-color: $white;
+  border: 1px solid $gray;
+  border-radius: 0.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 465px) {
+  .modal-content {
+    height:460px;
+    width: 460px;
+  }
+}
+
+.modal-header {
+  overflow-y: auto;
+  background-color: $primaryColor;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.modal-header h2 {
+  color: $white;
+  margin-top: 0;
+  text-align: center;
+  padding-top: .8rem;
+}
+
+.close {
+  position: absolute;
+  padding-right: 0.3rem;
+  display: block;
+  text-align: end;
+  right: 0;
+}
+
+.modal-body{
+  max-height: 500px;
+  margin: 2rem;
+
+  .search-box{
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: 465px) {
+
+  .search-box{
+    width: 100%;
+    margin: 1rem auto;
+  }
+}
+
+.modal-table{
+  max-height: 240px;
+  overflow-y: scroll;
+}
+
+.cross{
+  margin: .5rem;
+}
+
+.cross:hover{
+  cursor: pointer;
+  color: $white;
+}
+
+
+// table
+
+
+.rwd-table {
+  border-spacing: 2px;
+}
+
+.rwd-table thead{
+  background-color: $primaryColor;
+}
+
+thead, tbody, tr{
+  width: 100%;
+  border-spacing: 2px 1em;
+}
+
+thead tr > th{
+  width: 5%;
+}
+
+thead tr th{
+  padding: .2rem;
+  margin: 2px;
+  color: $white;
+}
+
+thead{
+  margin: 2px;
+  padding: 4px;
+}
+
+tbody{
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.favSelection{
+  cursor: pointer;
+}
+
+.pic img{
+  max-width:100%;
+  display:block;
+  margin:auto;
+  max-height: 40px;
+}

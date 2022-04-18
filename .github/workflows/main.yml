@@ -1,0 +1,21 @@
+name: Test_build
+
+# Controls when the action will run.
+on: [push]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build_test:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-18.04
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - name: test_build
+        run: |
+          yarn install --immutable --immutable-cache
+          yarn run test
+          yarn run build

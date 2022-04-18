@@ -1,0 +1,97 @@
+a {
+  text-decoration: none;
+  color: $primaryColor;
+  font-size: 1.3rem;
+}
+
+header{
+  background: $white;
+  box-shadow: $boxShadow;
+  display: flex;
+  justify-content: center;
+  padding:1rem 7%;
+  position: fixed;
+  top:0; left: 0; right:0;
+  z-index: 1000;
+
+  .logo{
+    align-items: center;
+    color:$primaryColor;
+    display: flex;
+    font-weight: bolder;
+    img{
+      margin-right: .5rem;
+      height: 30px;
+    }
+
+    i{
+      color:$primaryColor;
+    }
+  }
+
+  .navbar{
+    align-items: center;
+    display: flex;
+    justify-content: end;
+    position: relative;
+
+    .user-image {
+      position: relative;
+
+      img {
+        height: 30px;
+        background-color: $white;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+button{
+  border-radius: 5px;
+  border-color: 1px solid $primaryColor;
+  background-color: $primaryColor;
+}
+
+.navbar {
+  display: flex;
+  height: 40px;
+}
+
+.user-image {
+  height: 70px;
+}
+
+.user-image > img:nth-child(1) {
+  height: 40px;
+  margin-left: 1rem;
+}
+
+.user-circle{
+  background-color: $white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px $white;
+  color:$secondaryColor;
+  height: 40px;
+  left: 10px;
+  position: relative;
+  top: 0px;
+  width: 40px;
+}
+
+.header-container{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 1024px;
+}
+
+.view-icon{
+  color: $gray;
+  font-size: 1.5rem;
+  cursor: pointer;
+  &:hover{
+    color: $primaryColor;
+  }
+}

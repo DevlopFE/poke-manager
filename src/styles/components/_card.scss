@@ -1,0 +1,169 @@
+.card {
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
+  display: grid;
+  height: 200px;
+  margin: 1.2rem 0.4rem;
+  width: 135px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20% 60% 20%;
+  grid-template-areas:
+    "brand"
+    "image"
+    "footer";
+
+    @media (min-width: 576px) {
+      min-width: 200px;
+     }
+}
+
+.card:hover{
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.card-poke{
+  align-items: center;
+  background-color: $black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  grid-area: brand;
+  justify-content: space-between;
+  .name, .id {
+    display: inline-block;
+    color: $white;
+    font-size: 9px;
+    text-transform: uppercase;
+    margin: .5rem;
+
+    @media (min-width: 576px) {
+      font-size: 12px;
+     }
+  }
+}
+
+.card-footer{
+  align-items: center;
+  display: flex;
+  grid-area: footer;
+  justify-content: space-between;
+  margin-top: .3rem;
+  .height, .weight{
+    font-size: 9px;
+    margin: .5rem;
+
+    @media (min-width: 576px) {
+      font-size: 12px;
+     }
+  }
+}
+
+.card-header {
+  grid-area: image;
+}
+
+.card-header img {
+  height: 140px;
+  max-width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.poke-container {
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
+  display:block;
+  line-height: 40px;
+  margin: .5rem 1rem;
+  max-width:700px;
+  min-height: 40px;
+  text-align: center;
+  width:80vw;
+  &:hover{
+    cursor: pointer;
+  }
+
+  @media (min-width: 992px) { 
+    height: 50px;
+    line-height: 50px;
+   }
+
+  .poke-box{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .poke-id{
+      background-color: $black;
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+      color: $white;
+      font-size: 12px;
+      padding: 0;
+      width: 15%;
+
+      @media (min-width: 576px) {
+        font-size: 14px;
+       }
+    }
+  
+    .poke-img{
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: auto;
+        max-height: 40px;
+        display: block;
+
+        @media (min-width: 992px) { 
+          max-height: 50px;
+         }
+      }
+    }
+  
+    .poke-data{
+      width:65%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $lightGray;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      .poke-info{
+        text-align: left;
+        display: inline-block;
+        min-width: 10%;
+        padding-left: 5%;
+        font-size: 9px;
+
+        @media (min-width: 576px) {
+          padding-left: 8%;
+          font-size: 12px;
+         }
+
+         @media (min-width: 992px) { 
+          padding-left: 10%;
+          font-size: 15px;
+         }
+      }
+      .name{
+        margin-left: 5%;
+        text-transform: uppercase;
+         @media (min-width: 576px) {
+           margin-left: 7%;
+         }
+
+         @media (min-width: 992px) { 
+          padding-left: 0;
+          margin-left: 0;
+         }
+      }
+      .prop{
+        color: $gray;
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+.pagination-container{
+    @extend .container-center;
+    margin-top: 1rem;
+  }
+  
+  
+  .no-allowed{
+    color: rgb(0,0,0,0.1) !important;
+    cursor: not-allowed;
+  }
+
+  // buttons
+  
+  .btn-page{
+    border-radius: 100%;
+    border: 1px solid #ccc;
+    box-shadow: $primaryColor;
+    color: $black;
+    cursor: pointer;
+    font-size: 9px;
+    margin: 1rem .3rem;
+    padding: 5px 5px;
+  }
+  
+  .btn-page:hover{
+    background-color: $secondaryColor;
+    color: $white;
+  }
+  
+  .active{
+    background-color: $black;
+    color: $white;  
+  }
+
+  ul.pagination {
+    li.active {
+      span {
+        background-color: #E3250F;
+        color: white;
+      }
+    }
+  }
+
+  ul.pagination {
+    li.active {
+      span {
+        background-color: $primaryColor;
+        color: white;
+      }
+    }
+  }
+  
+  .pagination {
+    border-radius: 4px;
+    display: inline-block;
+    margin: 20px 0;
+    padding-left: 0;
+  }
+  
+  .pagination>li {
+    display: inline;
+    cursor:pointer;
+  }
+  
+  .pagination>li>a, .pagination>li>span {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: inherit;
+    float: left;
+    font-size: 9px;
+    line-height: 1.42857143;
+    margin-left: -1px;
+    padding:8px 8px;
+    position: relative;
+    text-decoration: none;
+    &:hover{
+      background-color: $lightGray;
+    }
+
+    @media (min-width: 576px) {
+      font-size: 12px;
+      padding: 5px 10px;
+    }
+
+    @media (min-width: 992px) { 
+      font-size: 15px;
+      padding: 6px 12px;
+    }
+  }
+
+  .disabled-btn{
+    cursor: not-allowed !important;
+    color: rgb(0,0,0,0.1);
+  }
